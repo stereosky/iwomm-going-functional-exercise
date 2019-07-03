@@ -1,8 +1,6 @@
 import random
 
 
-
-
 def create_members():
     names = ['jack', 'joe', 'jason', 'james', 'john', 'jakob', 'june', 'jeb', 'jarrod', 'jim']
     coding_languages = ['scala', 'python', 'java', 'java script', 'go', 'haskell']
@@ -58,9 +56,9 @@ if __name__ == '__main__':
 
     print('The average age is {}'.format(average_age(items)))
 
-    coding_languages = []
+    languages = []
     for i in items:
-        coding_languages.append(i['coding_language'])
-    stats = programming_lang_counts(items, list(set(coding_languages)))
+        languages.append(i['coding_language'])
+    stats = programming_lang_counts(items, list(set(languages)))
     for stat in dict.keys(stats):
         print('{} people code {}'.format(stats[stat], stat))
