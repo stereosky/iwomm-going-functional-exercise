@@ -50,15 +50,15 @@ def programming_lang_counts(members, languages):
 if __name__ == '__main__':
     items = create_members()
     for member in find_taco_lovers(find_taco_lovers(items)):
-        print('{} likes tacos'.format(member['name']))
+        print(f'{member["name"]} likes tacos')
 
-    print('{} members like beer'.format(count_beer_drinkers(items)))
+    print(f'{count_beer_drinkers(items)} members like beer')
 
-    print('The average age is {}'.format(average_age(items)))
+    print(f'The average age is {average_age(items)}')
 
     languages = []
     for i in items:
         languages.append(i['coding_language'])
     stats = programming_lang_counts(items, list(set(languages)))
     for stat in dict.keys(stats):
-        print('{} people code {}'.format(stats[stat], stat))
+        print(f'{stats[stat]} people code {stat}')
